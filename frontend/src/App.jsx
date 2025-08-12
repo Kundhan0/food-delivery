@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
@@ -8,6 +8,7 @@ import Form from "./components/Form";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
 import Orders from "./components/Orders";
+
 
 function App() {
   return (
