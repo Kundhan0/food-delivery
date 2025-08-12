@@ -1,9 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
-const MONGO_URI = "mongodb://127.0.0.1:27017/food-delivery-app"; 
+const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/food-delivery-app"; 
 const bodyParser = require("body-parser");
 
 const authRouter = require("./routes/auth.route");
@@ -21,9 +22,15 @@ mongoose
   });
 
 app.use(cors({
-  origin: "http://localhost:5173", // Frontend URL
+  origin: [process.env.FRONTEND_URL,"http://localhost:5173"], // Frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
 }));
+
+
+app.get("/", (req, res) => {
+  res.send("Welcome to the Food Delivery App API");
+})
+
 app.use(bodyParser.json());
 app.use("/api/auth", authRouter);
 app.use("/api/products", productRouter);
