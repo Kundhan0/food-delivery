@@ -1,6 +1,7 @@
 import React from "react";
 import axois from "axios";
 import { Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [email, setEmail] = React.useState("");
@@ -89,7 +90,10 @@ const SignUp = () => {
       >
         Sign Up
       </button>
-      <a href="/signin">Already have an account?</a>
+      <p className="">Already have an account</p>
+      <Link to="/signin" >
+      Signin
+      </Link>
     </form>
   </div>
 );
