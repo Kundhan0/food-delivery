@@ -49,6 +49,12 @@ const Navbar = () => {
         >
           Orders
         </button>
+        <button
+          onClick={() => handleProtectedRoute("/admin")}
+          className="px-4 py-2 rounded-lg hover:bg-orange-600 transition font-semibold"
+        >
+          A
+        </button>
         <button className="bg-white text-orange-500 px-5 py-2 rounded-lg font-bold shadow hover:bg-orange-100 transition " onClick={handlesigninLogut}>{isLogedIn ? "Logout" : "signin"}</button>
       </div>
     </nav>
