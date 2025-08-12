@@ -8,7 +8,6 @@ import Form from "./components/Form";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
 import Orders from "./components/Orders";
-import Navbar from "./components/Navbar.jsx"; 
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/admin" element={<Form />} />
-            
           </Routes>
         </main>
         <Footer />
