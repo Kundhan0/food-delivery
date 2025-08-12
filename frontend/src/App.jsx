@@ -1,5 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+<<<<<<< HEAD
+=======
+import Navbar from "./components/Navbar";
+>>>>>>> 869f2f8ee22d3ccd013be2e109313a45f81ee47f
 import Footer from "./components/Footer";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
