@@ -9,13 +9,12 @@ import Home from "./components/Home";
 import Cart from "./components/Cart";
 import Orders from "./components/Orders";
 
-
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-orange-50">
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow px-2 sm:px-6 py-4">
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/cart" element={<Cart/>} />
