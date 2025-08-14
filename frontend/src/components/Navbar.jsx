@@ -19,7 +19,7 @@ const Navbar = () => {
       setIsLoggedIn(false);
       navigate("/signin");
     } else {
-      navigate("/signin");
+      navigate("/");
     }
   }
 
