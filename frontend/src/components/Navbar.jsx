@@ -4,18 +4,11 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
   const [isLogedIn, setIsLoggedIn] = React.useState(false);
-  const [isAdmin, setIsAdmin] = React.useState(false);
-
+ 
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
       setIsLoggedIn(true);
-      try {
-        const payload = JSON.parse(atob(token.split(".")[1]));
-        setIsAdmin(payload.role === "admin");
-      } catch {
-        setIsAdmin(false);
-      }
     } else {
       setIsLoggedIn(false);
     }
@@ -59,14 +52,7 @@ const Navbar = () => {
         >
           Orders
         </button>
-        {isAdmin && (
-          <button
-            onClick={() => handleProtectedRoute("/admin")}
-            className="px-4 py-2 rounded-lg hover:bg-orange-600 transition font-semibold w-full sm:w-auto"
-          >
-            Admin
-          </button>
-        )}
+        
         <button
           className="bg-white text-orange-500 px-5 py-2 rounded-lg font-bold shadow hover:bg-orange-100 transition "
           onClick={handlesigninLogut}
