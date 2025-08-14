@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen bg-orange-50">
         <Navbar />
-        <main className="flex-grow px-2 sm:px-6 py-4">
+        <main className="flex-grow px-2 ">
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/cart" element={<Cart/>} />
